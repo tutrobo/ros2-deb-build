@@ -2,6 +2,10 @@
 
 set -e
 
+# for libk4a
+echo 'libk4a1.4 libk4a1.4/accepted-eula-hash string 0f5d5c5de396e4fee4c0753a21fee0c1ed726cf0316204edda484f08cb266d76' | debconf-set-selections
+echo 'libk4a1.4 libk4a1.4/accept-eula boolean true' | debconf-set-selections
+
 APT_LIST=/etc/apt/sources.list.d/actions-local.list
 ROSDEP_LIST=/etc/ros/rosdep/sources.list.d/99-actions-local.list
 
